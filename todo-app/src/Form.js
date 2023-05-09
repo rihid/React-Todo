@@ -26,7 +26,7 @@ class Form extends Component {
       
         return (
           <form>
-            <label htmlFor="todo">Name</label>
+            <label htmlFor="todo">Todo</label>
             <input
               type="text"
               name="todo"
