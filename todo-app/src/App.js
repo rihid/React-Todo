@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
-import Table from './Table'
+import Table from './Table';
+import Form from './Form';
 
 class App extends Component {
   state = {
-	todos: [
-      {
-        todo: 'Makan',
-        waktu: '12.00'
-      },
-      {
-        todo: 'Minum',
-        waktu: '01.00'
-      },
-    ],
+	todos: [],
   }
 
   removeTodo = (index) => {
@@ -26,12 +18,17 @@ class App extends Component {
     })
   }
 
+  handleSubmit = (todo) => {
+    this.setState({ todos: [...this.state.todos, todo] })
+  }
+
   render() {
     const { todos } = this.state;
     return (
       <div className="Container">
         <h1>Todo</h1>
         <Table todosData={todos} removeTodo={this.removeTodo} />
+        <Form handleSubmit={this.handleSubmit} />
       </div>
     )
   }
