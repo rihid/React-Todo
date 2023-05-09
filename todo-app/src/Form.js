@@ -33,7 +33,7 @@ class Form extends Component {
               id="todo"
               value={todo}
               onChange={this.handleChange} />
-            <label htmlFor="waktu">Job</label>
+            <label htmlFor="waktu">Jam</label>
             <input
               type="text"
               name="waktu"
